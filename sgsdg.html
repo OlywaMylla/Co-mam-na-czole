@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="all">
+        <div class="formularz">
+            <h1>Design your own squere</h1>
+            <div class="porządek">
+                <div class="rzad">
+                    <h1>X:</h1>
+                    <input type="number" name="x" id="x">
+                </div>
+                
+                <div class="rzad">
+                    <h1>Y:</h1>
+                    <input type="number" name="y" id="y">
+                </div>
+                
+                <div class="rzad">
+                    <h1>szer:</h1>
+                    <input type="number" name="szer" id="szer">
+                </div>
+                
+                <div class="rzad">
+                    <h1>wys:</h1>
+                    <input type="number" name="wys" id="wys">
+                </div>
+                
+                <div class="rzad">
+                    <h1>kolor-tła:</h1>
+                    <input type="color" name="color" id="color" value="#3D8FB8">
+                </div>
+                <div class="rzad" style="justify-content: center;">
+                    <button onclick="wykonaj()" class="ok">OK</button>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="object" id="object">
+
+        </div>
+    </section>
+
+    <script>
+
+        function wykonaj(){
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let szer = document.getElementById("szer").value;
+            let wys = document.getElementById("wys").value;
+            let color = document.getElementById("color").value;
+            let object = document.getElementById("object");
+
+            object.style.marginLeft = x + "px";
+            object.style.marginTop = y + "px";
+            object.style.width = szer + "px";
+            object.style.height = wys + "px";
+            object.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

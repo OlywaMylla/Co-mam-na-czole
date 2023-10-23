@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kudłate chuj wie co</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <section class="geralt">
+        <div class="rojo">
+            <h1>X</h1> <input id="x" type="number" placeholder="Podaj X">
+            <br>
+            <h1>Y</h1> <input id="y" type="number" placeholder="Podaj Y">
+        </div>
+        <div class="penis">
+            <h2>Szerokość</h2> <input id="sz" type="number" placeholder="Podaj szerokość">
+            <br>
+            <h2>Wysokość</h2> <input id="wys" type="number" placeholder="Podaj wysokość">
+            <br>
+            <h2>Kolor tła</h2> <input id="kt" type="color">
+        </div>
+        <div class="semen">
+            <button id="guzior" onclick="bodzio()">OK</button>
+            <div id="blok">
+                <h2>Obecny <br>kolor</h2>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function bodzio(){
+
+        let x = document.getElementById('x').value;
+        let y = document.getElementById('y').value;
+        let sz = document.getElementById('sz').value;
+        let wys = document.getElementById('wys').value;
+        let kt = document.getElementById('kt').value;
+        let blok = document.getElementById('blok');
+
+            blok.style.marginLeft = x + "px";
+            blok.style.marginTop = y + "px";
+            blok.style.width = sz + "px";
+            blok.style.height = wys + "px";
+            blok.style.backgroundColor = kt;
+        }
+    </script>
+</body>
+</html>
